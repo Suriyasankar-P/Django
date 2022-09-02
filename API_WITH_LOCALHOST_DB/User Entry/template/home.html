@@ -1,0 +1,57 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <form action="#"  method = "POST">
+        {% csrf_token %}
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" name="Full_name" placeholder="Enter Your Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Username</span>
+                    <input type="text" name="User_name" placeholder="Enter Your User name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" name="Email" placeholder="Enter Your Email" required >
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone</span>
+                    <input type="text" name="Phone" placeholder="Enter Your Phone Number" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" name="Password" placeholder="Enter Your Password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confrim Password</span>
+                    <input type="password"  name="Confrim_password" placeholder="Confrim Your Password" required>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+        <div class="login">
+            <center><p>Already have an account?<a href="login">&nbsp;Login</a></p></center>
+        </div>
+    </div>
+
+</body>
+
+</html>
